@@ -1,3 +1,5 @@
+PREFIX := /usr
+
 all:
 	./build.sh main.native main.byte
 
@@ -15,5 +17,6 @@ clean:
 	./build.sh -clean
 	rm -f ./*.native ./*.byte
 
-
-
+install:
+	install -D ${PREFIX}/bin
+	install -m 755 main.native ${PREFIX}/bin/scfgc

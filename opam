@@ -1,0 +1,15 @@
+opam-version: "1.2"
+name: "scfgc"
+version: "0.3"
+maintainer: "smog_alado <example@example.com>"
+author: "smog_alado <example@example.com>"
+homepage: "https://github.com/hugomg/scfgc"
+bug-reports: "https://github.com/hugomg/scfgc/issues"
+license: ""
+dev-repo: "git://github.com/hugomg/scfgc.git"
+build: [
+  [make]
+]
+install: ["install" "-m" "755" "main.native" "%{prefix}%/bin/scfgc"]
+remove: ["ocamlfind" "remove" "project"]
+depends: ["ocamlfind" "core_kernel" "menhir" "cmdliner" "fileutils"]
